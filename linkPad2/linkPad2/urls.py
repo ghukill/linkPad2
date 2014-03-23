@@ -5,8 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'linkPad2.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
+    url(r'^$', 'linkPad2.views.index', name='index'),
+    url(r'^add/$', 'linkPad2.views.addLink', name='addLink'),    
 
-    url(r'^admin/', include(admin.site.urls)),
 )

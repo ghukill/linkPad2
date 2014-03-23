@@ -1,0 +1,31 @@
+<h2>linkPad2 Alpha</h2>
+<form>
+	<input type='text' placeholder="searching"/>	
+</form>
+
+<ul>
+	{% for link in links %}
+	    <li>
+	    	<ul>
+	    		<li>{{link.linkTitle}}</li>
+	    		<li><a target="_blank" href="{{link.linkURL}}">{{link.linkURL}}</a></li>
+    		</ul>
+		</li>
+	{% endfor %}
+</ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if links.has_previous %}
+            <a href="?page={{ links.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ links.number }} of {{ links.paginator.num_pages }}
+        </span>
+
+        {% if links.has_next %}
+            <a href="?page={{ links.next_page_number }}">next</a>
+        {% endif %}
+    </span>
+</div>
