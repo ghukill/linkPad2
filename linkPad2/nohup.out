@@ -1,0 +1,53 @@
+[24/Mar/2014 14:13:40] "GET / HTTP/1.1" 200 1441
+[24/Mar/2014 14:13:43] "GET /?page=2 HTTP/1.1" 200 2160
+[24/Mar/2014 14:13:45] "GET /?page=3 HTTP/1.1" 200 1749
+[24/Mar/2014 14:13:46] "GET /?page=4 HTTP/1.1" 200 2331
+[24/Mar/2014 14:13:47] "GET /?page=5 HTTP/1.1" 200 1745
+[24/Mar/2014 14:13:48] "GET /?page=6 HTTP/1.1" 200 1949
+[24/Mar/2014 14:13:50] "GET /?page=5 HTTP/1.1" 200 1745
+[24/Mar/2014 14:14:02] "GET /?page=6 HTTP/1.1" 200 1949
+[24/Mar/2014 14:14:03] "GET /?page=7 HTTP/1.1" 200 1790
+[24/Mar/2014 14:14:04] "GET /?page=8 HTTP/1.1" 200 1616
+[24/Mar/2014 14:14:04] "GET /?page=9 HTTP/1.1" 200 1895
+[24/Mar/2014 14:14:05] "GET /?page=8 HTTP/1.1" 200 1616
+[24/Mar/2014 22:50:32] "GET / HTTP/1.1" 200 1441
+Validating models...
+
+0 errors found
+March 24, 2014 - 14:13:28
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x16b48c0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 96, in wrapper
+    et, ev, tb = sys.exc_info()
+AttributeError: 'NoneType' object has no attribute 'exc_info'
+[24/Mar/2014 22:51:37] "GET / HTTP/1.1" 200 3233
+[24/Mar/2014 22:52:43] "GET / HTTP/1.1" 200 3725
+[24/Mar/2014 22:52:46] "GET / HTTP/1.1" 200 3725
+[24/Mar/2014 22:52:46] "GET / HTTP/1.1" 200 3725
+[24/Mar/2014 22:52:59] "GET / HTTP/1.1" 200 3738
+[24/Mar/2014 22:53:01] "GET / HTTP/1.1" 200 3738
+[24/Mar/2014 22:53:17] "GET / HTTP/1.1" 200 3725
+[24/Mar/2014 22:53:31] "GET / HTTP/1.1" 200 3756
+[24/Mar/2014 22:53:44] "GET / HTTP/1.1" 200 3730
+[24/Mar/2014 22:55:02] "GET / HTTP/1.1" 200 3696
+[24/Mar/2014 22:55:02] "GET /css/main.css HTTP/1.1" 404 2068
+[24/Mar/2014 22:55:03] "GET / HTTP/1.1" 200 3696
+[24/Mar/2014 22:55:03] "GET /css/main.css HTTP/1.1" 404 2068
+[24/Mar/2014 22:58:42] "GET / HTTP/1.1" 200 3696
+[24/Mar/2014 22:58:42] "GET /css/main.css HTTP/1.1" 404 2068
+[24/Mar/2014 22:58:44] "GET / HTTP/1.1" 200 3696
+[24/Mar/2014 22:58:44] "GET /css/main.css HTTP/1.1" 404 2068
+[24/Mar/2014 22:59:14] "GET / HTTP/1.1" 500 100749
+[24/Mar/2014 22:59:41] "GET / HTTP/1.1" 200 3705
+[24/Mar/2014 22:59:41] "GET /static/css/main.css HTTP/1.1" 404 1645
+[24/Mar/2014 23:02:48] "GET / HTTP/1.1" 200 3705
+[24/Mar/2014 23:02:48] "GET /static/css/main.css HTTP/1.1" 404 1645
+[24/Mar/2014 23:02:49] "GET / HTTP/1.1" 200 3705
+[24/Mar/2014 23:02:49] "GET /static/css/main.css HTTP/1.1" 404 1645
+[24/Mar/2014 23:02:57] "GET / HTTP/1.1" 200 3712
+[24/Mar/2014 23:02:58] "GET /static/static/css/main.css HTTP/1.1" 404 1666
+[24/Mar/2014 23:02:58] "GET / HTTP/1.1" 200 3712
+[24/Mar/2014 23:02:59] "GET /static/static/css/main.css HTTP/1.1" 404 1666

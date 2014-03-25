@@ -4,6 +4,7 @@ from django.template import RequestContext, loader
 from django.core.paginator import Paginator
 import urllib2
 from bs4 import BeautifulSoup
+import datetime
 import sunburnt
 
 
@@ -28,7 +29,7 @@ def index(request):
 
 	# Sunburnt / Django paginated
 	##################################
-	paginator = Paginator(si.query(id="*").sort_by("-last_modified"), 5) 
+	paginator = Paginator(si.query(id="*").sort_by("-last_modified"), 10) 
 	
 	 # Make sure page request is an int. If not, deliver first page.
 	try:
@@ -64,13 +65,15 @@ def addLink(request):
 	# get page title
 	soup = BeautifulSoup(urllib2.urlopen(add_url))
 	page_title = soup.title.string
+
+	# set date
+	current_date = datetime.datetime.now().isoformat()
 	
 	# index in Solr
-	document = {
-		"id":"horsegoober",
+	document = {		
 		"linkTitle":page_title,
 		"linkURL":add_url,
-		"last_modified":"NOW"
+		"last_modified":current_date
 	}
 	si.add(document)
 	si.commit()
