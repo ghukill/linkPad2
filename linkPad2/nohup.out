@@ -194,3 +194,40 @@ Quit the server with CONTROL-C.
 [26/Mar/2014 03:04:23] "GET /search/?q=google HTTP/1.1" 200 3373
 [26/Mar/2014 03:04:29] "GET /search/?q=horese HTTP/1.1" 200 511
 [26/Mar/2014 03:04:32] "GET /search/?q=horse HTTP/1.1" 200 819
+[26/Mar/2014 03:11:07] "GET / HTTP/1.1" 200 3116
+[26/Mar/2014 03:11:07] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 03:12:18] "GET /search?q=Title HTTP/1.1" 301 0
+[26/Mar/2014 03:12:19] "GET /search/?q=Title HTTP/1.1" 200 4445
+[26/Mar/2014 03:12:23] "GET /search/?q=Title&page=2 HTTP/1.1" 200 3278
+[26/Mar/2014 16:30:14] "GET /add/u HTTP/1.1" 404 2171
+[26/Mar/2014 16:30:23] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59574
+[26/Mar/2014 16:30:37] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59815
+[26/Mar/2014 16:30:40] "GET / HTTP/1.1" 200 3116
+[26/Mar/2014 16:30:41] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 16:30:43] "GET /search?q=horse HTTP/1.1" 301 0
+[26/Mar/2014 16:30:43] "GET /search/?q=horse HTTP/1.1" 200 805
+[26/Mar/2014 16:30:49] "GET /add/ HTTP/1.1" 200 16
+[26/Mar/2014 16:30:54] "GET /add/?URL=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 200 16
+[26/Mar/2014 16:30:58] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59574
+[26/Mar/2014 16:31:11] "GET /add/?url=http://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59565
+[26/Mar/2014 16:31:15] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59574
+[26/Mar/2014 16:31:23] "GET /add/?url=http://www.google.com HTTP/1.1" 500 59340
+[26/Mar/2014 16:37:54] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 500 59815
+Validating models...
+
+0 errors found
+March 26, 2014 - 03:11:04
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+Uh-oh.
+Uh-oh.
+[26/Mar/2014 16:38:44] "GET /add/?url=https://lpdaac.usgs.gov/products/modis_overview HTTP/1.1" 200 6
+[26/Mar/2014 16:38:48] "GET / HTTP/1.1" 200 3093
+Validating models...
+
+0 errors found
+March 26, 2014 - 16:38:42
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.

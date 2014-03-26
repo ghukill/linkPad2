@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from bs4 import BeautifulSoup
+import urllib2
 import datetime
 import json
 import sunburnt
