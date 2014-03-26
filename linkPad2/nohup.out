@@ -51,3 +51,146 @@ AttributeError: 'NoneType' object has no attribute 'exc_info'
 [24/Mar/2014 23:02:58] "GET /static/static/css/main.css HTTP/1.1" 404 1666
 [24/Mar/2014 23:02:58] "GET / HTTP/1.1" 200 3712
 [24/Mar/2014 23:02:59] "GET /static/static/css/main.css HTTP/1.1" 404 1666
+[25/Mar/2014 00:02:12] "GET /?page=4 HTTP/1.1" 200 3366
+[25/Mar/2014 00:02:14] "GET /?page=5 HTTP/1.1" 200 3823
+[25/Mar/2014 00:02:16] "GET /?page=10 HTTP/1.1" 200 3269
+[25/Mar/2014 00:10:19] "GET / HTTP/1.1" 200 2910
+[25/Mar/2014 00:10:19] "GET /static/css/main.css HTTP/1.1" 200 0
+Validating models...
+
+0 errors found
+March 25, 2014 - 00:02:09
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[25/Mar/2014 01:04:56] "GET /? HTTP/1.1" 200 2910
+[25/Mar/2014 01:04:56] "GET /static/css/main.css HTTP/1.1" 304 0
+Validating models...
+
+0 errors found
+March 25, 2014 - 00:57:37
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[25/Mar/2014 01:32:58] "GET /?page=2 HTTP/1.1" 200 4258
+[25/Mar/2014 01:32:58] "GET /static/css/main.css HTTP/1.1" 304 0
+[25/Mar/2014 13:17:15] "GET / HTTP/1.1" 200 2910
+[25/Mar/2014 13:17:15] "GET /static/css/main.css HTTP/1.1" 200 0
+[25/Mar/2014 13:17:17] "GET /?page=2 HTTP/1.1" 200 4258
+[25/Mar/2014 13:17:18] "GET /?page=3 HTTP/1.1" 200 4430
+[25/Mar/2014 13:17:32] "GET /?page=4 HTTP/1.1" 200 3366
+[25/Mar/2014 13:17:35] "GET /?page=3 HTTP/1.1" 200 4430
+[25/Mar/2014 13:18:13] "GET /?page=10 HTTP/1.1" 200 3269
+[25/Mar/2014 13:21:22] "GET /? HTTP/1.1" 200 2910
+[25/Mar/2014 13:21:24] "GET /?page=2 HTTP/1.1" 200 4258
+[25/Mar/2014 13:21:25] "GET /?page=3 HTTP/1.1" 200 4430
+[25/Mar/2014 13:22:44] "GET /? HTTP/1.1" 200 2910
+[25/Mar/2014 19:30:27] "GET / HTTP/1.1" 200 2910
+[25/Mar/2014 19:30:27] "GET /static/css/main.css HTTP/1.1" 200 0
+[25/Mar/2014 19:32:55] "GET /add/URL=http://blogs.loc.gov/digitalpreservation/2014/03/what-could-curation-possibly-mean/ HTTP/1.1" 404 2305
+[25/Mar/2014 19:33:02] "GET /add/?url=http://blogs.loc.gov/digitalpreservation/2014/03/what-could-curation-possibly-mean/ HTTP/1.1" 200 6
+[25/Mar/2014 19:33:08] "GET / HTTP/1.1" 200 3074
+[25/Mar/2014 22:12:03] "GET /?page=10 HTTP/1.1" 200 3227
+[25/Mar/2014 22:12:03] "GET /static/css/main.css HTTP/1.1" 304 0
+[25/Mar/2014 22:12:06] "GET / HTTP/1.1" 200 3074
+[26/Mar/2014 02:32:43] "GET / HTTP/1.1" 200 3074
+[26/Mar/2014 02:32:44] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:34:23] "GET / HTTP/1.1" 200 3096
+[26/Mar/2014 02:34:24] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:34:26] "GET /?url=horse HTTP/1.1" 200 3096
+[26/Mar/2014 02:34:40] "GET /?url=horse HTTP/1.1" 200 3104
+[26/Mar/2014 02:34:40] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:34:43] "GET /search/?url=horse HTTP/1.1" 404 2063
+Validating models...
+
+0 errors found
+March 25, 2014 - 01:05:36
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[26/Mar/2014 02:41:52] "GET / HTTP/1.1" 500 60249
+Validating models...
+
+0 errors found
+March 26, 2014 - 02:35:02
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[26/Mar/2014 02:42:33] "GET / HTTP/1.1" 200 3104
+[26/Mar/2014 02:42:33] "GET /static/css/main.css HTTP/1.1" 304 0
+Validating models...
+
+0 errors found
+March 26, 2014 - 02:42:26
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+Unhandled exception in thread started by <function wrapper at 0x2d708c0>
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 93, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 127, in inner_run
+    ipv6=self.use_ipv6, threading=threading)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/servers/basehttp.py", line 169, in run
+    httpd.serve_forever()
+  File "/usr/lib/python2.7/SocketServer.py", line 225, in serve_forever
+    r, w, e = select.select([self], [], [], poll_interval)
+AttributeError: 'NoneType' object has no attribute 'select'
+[26/Mar/2014 02:45:03] "GET / HTTP/1.1" 200 3102
+[26/Mar/2014 02:45:08] "GET /search/?q=google HTTP/1.1" 500 73257
+Validating models...
+
+0 errors found
+March 26, 2014 - 02:43:01
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[26/Mar/2014 02:46:34] "GET /search/?q=google HTTP/1.1" 500 69714
+[26/Mar/2014 02:52:14] "GET /search/?q=google HTTP/1.1" 200 3345
+[26/Mar/2014 02:52:14] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:53:06] "GET /search/search/?q=overflow HTTP/1.1" 404 2209
+[26/Mar/2014 02:53:14] "GET /search/search/?q=maps HTTP/1.1" 404 2205
+[26/Mar/2014 02:53:36] "GET /search/search/?q=maps HTTP/1.1" 404 2205
+[26/Mar/2014 02:53:42] "GET /search/search/?q=load HTTP/1.1" 404 2205
+[26/Mar/2014 02:53:49] "GET / HTTP/1.1" 200 3099
+[26/Mar/2014 02:53:52] "GET / HTTP/1.1" 200 3099
+[26/Mar/2014 02:53:53] "GET /static/css/main.css HTTP/1.1" 200 0
+[26/Mar/2014 02:54:00] "GET /search?q=search HTTP/1.1" 301 0
+[26/Mar/2014 02:54:00] "GET /search/?q=search HTTP/1.1" 200 3519
+[26/Mar/2014 02:54:05] "GET /search/search?q=formatted HTTP/1.1" 404 2207
+[26/Mar/2014 02:54:19] "GET / HTTP/1.1" 200 3100
+[26/Mar/2014 02:54:20] "GET / HTTP/1.1" 200 3100
+[26/Mar/2014 02:54:21] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:54:25] "GET /search?q=trans HTTP/1.1" 301 0
+[26/Mar/2014 02:54:26] "GET /search/?q=trans HTTP/1.1" 200 481
+[26/Mar/2014 02:54:28] "GET /search?q=google HTTP/1.1" 301 0
+[26/Mar/2014 02:54:29] "GET /search/?q=google HTTP/1.1" 200 3343
+[26/Mar/2014 02:54:33] "GET /search?q=correlate HTTP/1.1" 301 0
+[26/Mar/2014 02:54:33] "GET /search/?q=correlate HTTP/1.1" 200 711
+[26/Mar/2014 02:54:38] "GET /search/?q=google HTTP/1.1" 200 3343
+[26/Mar/2014 02:54:42] "GET /search/?page=2 HTTP/1.1" 500 60440
+[26/Mar/2014 02:55:16] "GET /search/?q=google&page=2 HTTP/1.1" 200 2050
+[26/Mar/2014 02:55:46] "GET /search/?q=google&page=2 HTTP/1.1" 200 2050
+[26/Mar/2014 02:55:47] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:56:06] "GET /search/?q=google&page=2 HTTP/1.1" 200 2066
+[26/Mar/2014 02:56:07] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 02:56:08] "GET / HTTP/1.1" 200 3116
+[26/Mar/2014 02:56:12] "GET /search/?q=google HTTP/1.1" 200 3359
+Validating models...
+
+0 errors found
+March 26, 2014 - 02:45:45
+Django version 1.6.2, using settings 'linkPad2.settings'
+Starting development server at http://0.0.0.0:8002/
+Quit the server with CONTROL-C.
+[26/Mar/2014 02:57:10] "GET /search/?q=google HTTP/1.1" 200 3359
+[26/Mar/2014 02:57:11] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 03:03:09] "GET /search/?q=google HTTP/1.1" 200 3373
+[26/Mar/2014 03:03:10] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 03:03:14] "GET /search/?q=google HTTP/1.1" 200 3373
+[26/Mar/2014 03:03:14] "GET /static/css/main.css HTTP/1.1" 304 0
+[26/Mar/2014 03:03:16] "GET /search/?q=google HTTP/1.1" 200 3373
+[26/Mar/2014 03:03:20] "GET /search/?q=google HTTP/1.1" 200 3373
+[26/Mar/2014 03:04:23] "GET /search/?q=google HTTP/1.1" 200 3373
+[26/Mar/2014 03:04:29] "GET /search/?q=horese HTTP/1.1" 200 511
+[26/Mar/2014 03:04:32] "GET /search/?q=horse HTTP/1.1" 200 819

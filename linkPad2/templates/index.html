@@ -5,9 +5,9 @@
 </head>
 
 </body>
-    <h2>linkPad2 Alpha</h2>
-    <form>
-    	<input type='text' placeholder="searching"/>	
+    <h2><a href="/">linkPad2 Alpha</a></h2>
+    <form action="/search">
+    	<input type='text' placeholder="searching" name="q"/>	
     </form>
 
     <ul>
@@ -24,7 +24,7 @@
     <div class="pagination">
         <span class="step-links">
             {% if links.has_previous %}
-                <a href="?page={{ links.previous_page_number }}">previous</a>
+                <a href="?{% if params.q %}q={{params.q}}&{% endif %}page={{ links.previous_page_number }}">previous</a>
             {% endif %}
 
             <span class="current">
@@ -32,7 +32,7 @@
             </span>
 
             {% if links.has_next %}
-                <a href="?page={{ links.next_page_number }}">next</a>
+                <a href="?{% if params.q %}q={{params.q}}&{% endif %}page={{ links.next_page_number }}">next</a>
             {% endif %}
         </span>
     </div>

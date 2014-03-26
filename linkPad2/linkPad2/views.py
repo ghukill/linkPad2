@@ -1,35 +1,20 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import RequestContext, loader
-from django.core.paginator import Paginator
-import urllib2
+from django.core.paginator import Paginator, InvalidPage, EmptyPage
 from bs4 import BeautifulSoup
 import datetime
+import json
 import sunburnt
 
-
-def index(request):
+def searchDB(request,constructed_query):
 	links = []
-	si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")	
-
-	# hand paginated
-	##################################
-	# response = si.query(id="*").paginate(start=0,rows=20).sort_by("-last_modified").execute()		
-	# print "Num Results:",response.result.numFound	
-	# for each in response:
-	# 	links.append(each)
 	
-	# template = loader.get_template('index.html')	
-	# context = RequestContext(request, {
-	# 	'links': links,
-	# })	
-	# print context
-	# return HttpResponse(template.render(context))
-
-
+	# si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")
 	# Sunburnt / Django paginated
 	##################################
-	paginator = Paginator(si.query(id="*").sort_by("-last_modified"), 10) 
+	# paginator = Paginator(si.query(id="*").sort_by("-last_modified"), 10) 
+	paginator = Paginator(constructed_query, 10) 
 	
 	 # Make sure page request is an int. If not, deliver first page.
 	try:
@@ -42,11 +27,23 @@ def index(request):
 		links = paginator.page(page)
 	except (EmptyPage, InvalidPage):
 		links = paginator.page(paginator.num_pages)
-
-	template = loader.get_template('index.html')	
+	
 	context = RequestContext(request, {
 		'links': links,
+		'params':request.GET,
 	})	
+
+	return context
+
+
+def index(request):
+
+	si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")
+	constructed_query = si.query(id="*").sort_by("-last_modified")
+
+	context = searchDB(request,constructed_query)
+	template = loader.get_template('index.html')	
+	
 	# print context
 	return HttpResponse(template.render(context))
 
@@ -81,5 +78,16 @@ def addLink(request):
 	return HttpResponse("Added!")
 
 	
-	
 
+def search(request):
+	# search string
+	search_string = request.GET['q']
+
+	si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")
+	constructed_query = si.query(search_string).sort_by("-last_modified")
+
+	context = searchDB(request,constructed_query)
+	template = loader.get_template('index.html')	
+	
+	# print context
+	return HttpResponse(template.render(context))
