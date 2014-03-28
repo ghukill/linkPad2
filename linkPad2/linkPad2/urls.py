@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^$', 'linkPad2.views.index', name='index'),
     url(r'^add/$', 'linkPad2.views.addLink', name='addLink'),
     url(r'^search/$', 'linkPad2.views.search', name='search'),
+    url(r'^edit/$', 'linkPad2.views.edit', name='edit'),
 )

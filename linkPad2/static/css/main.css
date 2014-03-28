@@ -1,0 +1,9 @@
+#links li{
+	margin-bottom:10px;
+}
+
+.editLink{
+	font-size:8px;
+	color:green;
+	padding-left:10px;
+}

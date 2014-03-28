@@ -52,17 +52,19 @@ def index(request):
 
 # add link to solr
 def addLink(request):
+
+	'''need check for title here, if none, load template that gives user a chance to enter one'''
+
 	try:
 		add_url = request.GET['url']
-	except:
-		print "Uh-oh."
+	except:		
 		return HttpResponse("No url bonehead.")
 
 	si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")
 
 	# get page title
 	soup = BeautifulSoup(urllib2.urlopen(add_url))
-	page_title = soup.title.string
+	page_title = soup.title.string	
 
 	# set date
 	current_date = datetime.datetime.now().isoformat()
@@ -92,3 +94,57 @@ def search(request):
 	
 	# print context
 	return HttpResponse(template.render(context))
+
+
+# add link to solr
+def edit(request):
+	# if presented with id only, render template with edit form		
+	if "id" in request.GET.keys() and len(request.GET) == 1:		
+
+		si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")
+		constructed_query = si.query(id=request.GET['id'])
+
+		context = searchDB(request,constructed_query)
+		template = loader.get_template('edit.html')
+
+		# print context
+		return HttpResponse(template.render(context))
+
+	# submit new document
+	elif all (k in request.GET for k in ("linkTitle","linkURL","id")):		
+		si = sunburnt.SolrInterface("http://localhost:8080/solr/linkPad/")		
+
+		# get previous last_modified
+		response = si.query(id=request.GET['id']).execute()
+		enduring_date = response[0]['last_modified'].isoformat()
+
+		# delete document
+		si.delete(request.GET['id'])
+
+		# set date
+		# current_date = datetime.datetime.now().isoformat()
+		
+		# index in Solr
+		document = {					
+			"linkTitle":request.GET['linkTitle'],
+			"linkURL":request.GET['linkURL'],
+			"last_modified":enduring_date
+		}
+		si.add(document)
+		si.commit()
+
+		context = RequestContext(request, {
+			'message': "Updated!",
+			'params':request.GET,
+		})
+
+		template = loader.get_template('message.html')
+
+		# print context
+		return HttpResponse(template.render(context))
+
+	else:
+		return HttpResponse("A tweaking of things has occurred, not a regular pattern.")
+
+
+	# if id AND linkTitle are present, submit form

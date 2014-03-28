@@ -1,0 +1,28 @@
+<html>
+<head>
+    <title>linkPad2 - Alpha</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <script type="text/javascript" src="/static/js/main.js"></script>
+</head>
+
+</body>
+    <h2><a href="/">linkPad2 Alpha</a></h2>      
+
+    {% for link in links %}
+        <p>You have selected link <em>{{link.id}}</em> to edit.</p>                
+
+        <form action="/edit/">
+            <label><strong>link title:</strong></label>
+            <input size=120 type="text" name="linkTitle" value="{{link.linkTitle}}"/><br>
+            <label><strong>link URL:</strong></label>
+            <input size=120 type="text" name="linkURL" value="{{link.linkURL}}"/><br>
+            <input type="hidden" name="id" value="{{link.id}}" />
+            <button type="submit">submit</button>
+        </form> 
+    {% endfor %}
+
+    <!--bookmarklet code-->
+    <p style="font-size:8px;"><a href='javascript:(function(){window.location="http://162.243.93.130:8002/add/?url="+document.URL;})();'>bookmarklet code</a></p>
+</body>
+</html>

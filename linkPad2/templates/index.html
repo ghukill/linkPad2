@@ -1,7 +1,9 @@
 <html>
 <head>
+    <title>linkPad2 - Alpha</title>
     {% load staticfiles %}
     <link rel="stylesheet" type="text/css" href="/static/css/main.css" />
+    <script type="text/javascript" src="/static/js/main.js"></script>
 </head>
 
 </body>
@@ -10,14 +12,9 @@
     	<input type='text' placeholder="searching" name="q"/>	
     </form>
 
-    <ul>
+    <ul id="links">
     	{% for link in links %}
-    	    <li>
-    	    	<ul>
-    	    		<li>{{link.linkTitle}}</li>
-    	    		<li><a target="_blank" href="{{link.linkURL}}">{{link.linkURL}}</a></li>
-        		</ul>
-    		</li>
+    	    <li id="{{link.id}}">{{link.linkTitle}}<a class="editLink" href="/edit/?id={{link.id}}">(edit)</a></br><a target="_blank" href="{{link.linkURL}}">{{link.linkURL}}</a></li>    	    	
     	{% endfor %}
     </ul>
 
@@ -36,5 +33,8 @@
             {% endif %}
         </span>
     </div>
+
+    <!--bookmarklet code-->
+    <p style="font-size:8px;"><a href='javascript:(function(){window.location="http://162.243.93.130:8002/add/?url="+document.URL;})();'>bookmarklet code</a></p>
 </body>
 </html>
